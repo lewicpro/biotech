@@ -1,13 +1,123 @@
 <!doctype html>
 <html lang="en">
-<head>
+<!-- <head>
   <meta charset="utf-8">
   <title>FingerprintAttendance</title>
-  <base href="/">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head> -->
+<head>
+  <!-- Page Title -->
+  <title>Biottendence</title>
+
+  <!-- Meta Data -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.png">
+
+  <!-- Web Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com/">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&amp;family=Poppins:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+
+  <!-- ======= Bootstrap CSS ======= -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+  <!-- ======= Font Awesome CSS ======= -->
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+  <!-- ======= Magnific Popup CSS ======= -->
+  <link rel="stylesheet" href="assets/plugins/magnific-popup/magnific-popup.css">
+
+  <!-- ======= Owl Carousel CSS ======= -->
+  <link rel="stylesheet" href="assets/plugins/owlcarousel/owl.carousel.min.css">
+
+  <!-- ======= Main Stylesheet ======= -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- ======= Custom Stylesheet ======= -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
+<body class="mat-typography">
   <app-root></app-root>
+  <a href="#" class="back-to-top">
+    <i class="fa fa-angle-up"></i>
+</a>
+
+<!-- ======= jQuery Library ======= -->
+<script src="assets/js/jquery.min.js"></script>
+
+<!-- ======= Bootstrap Bundle JS ======= -->
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+
+<!-- =======  Mobile Menu JS ======= -->
+<script src="assets/js/menu.min.js"></script>
+
+<!-- ======= Owl Carousel JS ======= -->
+<script src="assets/plugins/owlcarousel/owl.carousel.min.js"></script>
+
+<!-- ======= Retina JS ======= -->
+<script src="assets/plugins/retinajs/retina.min.js"></script>
+
+<!-- ======= Magnific Popup JS ======= -->
+<script src="assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+<!-- ======= Count Down Timer JS ======= -->
+<script src="assets/plugins/countdown-timer/countdown.min.js"></script>
+
+<!-- ======= Google API ======= -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjkssBA3hMeFtClgslO2clWFR6bRraGz0"></script>
+
+<!-- ======= Main JS ======= -->
+<script src="assets/js/main.js"></script>
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+<!-- ======= Custom JS ======= -->
+<script src="assets/js/custom.js"></script>
 </body>
 </html>

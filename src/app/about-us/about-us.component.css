@@ -1,0 +1,24 @@
+.single-feature:hover{
+  background:radial-gradient(ellipse at center, #5fb3fc 0%, #0089ff 100%);
+  color:white;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.single-feature::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  content: "";
+  background: #5fb3fc;
+  background: -o-radial-gradient(center, ellipse, #5fb3fc 0%, #0089ff 100%);
+  background: radial-gradient(ellipse at center, #5fb3fc 0%, #0089ff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5fb3fc', endColorstr='#0089ff',GradientType=1 );
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  opacity: 0;
+}
+
