@@ -1,0 +1,67 @@
+
+<div style="padding: 50px; background:#0E82EC;"></div>
+  <div class="row" style="min-height: 600px;">
+    <div class="col-2" style="background:white; padding-right:0px; padding-left: 0px;">
+
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne" style="background: white;">
+
+              <button class="btn-block text-left" style="background: white;" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Dashboard
+              </button>
+
+          </div>
+
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <!-- <div class="card-body"> -->
+              <ul class="list-group">
+                <li class="list-group-item" style="width:100%l; background-color: #E6EEF2; border: 1px solid transparent; padding-left: 10%; cursor: pointer;" (click)="main()">Main</li>
+                <!-- <li class="list-group-item">Dapibus ac facilisis in</li> -->
+
+              </ul>
+
+            <!-- </div> -->
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo" style="background: white;">
+
+              <button class="text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Attendance List
+              </button>
+
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <ul class="list-group">
+              <li class="list-group-item" style="width:100%l; background-color: #E6EEF2; border: 1px solid transparent; padding-left: 10%; cursor: pointer;" (click)="attendance()">Attendance</li>
+              <!-- <li class="list-group-item">Dapibus ac facilisis in</li> -->
+
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree" style="background: white;">
+            <!-- <h1 class="mb-0"> -->
+              <button class="btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Report
+              </button>
+            <!-- </h1> -->
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <ul class="list-group">
+              <li class="list-group-item" style="width:100%l; background-color: #E6EEF2; border: 1px solid transparent; padding-left: 10%; cursor: pointer;" (click)="attendancereport()">Attendance report</li>
+              <!-- <li class="list-group-item">Dapibus ac facilisis in</li> -->
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-10" style="background:#E6EEF2">
+      <router-outlet></router-outlet>
+
+    </div>
+  </div>
+

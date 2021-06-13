@@ -12,4 +12,15 @@ export class NavigationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  screen(){
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+
+  }
+
 }

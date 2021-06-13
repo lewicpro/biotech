@@ -1,0 +1,31 @@
+
+<div style="padding:10px;"></div>
+<div style="background: white; padding:20px"> <h4>Attendance list</h4> </div>
+<div style="background:white; padding:10px;     box-shadow: 0px 7px 4px 0px #00000026">
+  <table class="table table-borderless table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Time</th>
+        <th scope="col">Name</th>
+        <th scope="col">Department</th>
+        <th scope="col">Office</th>
+        <th scope="col">Region</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let m of datobtained let i = index">
+        <th scope="row">{{i*1 + 1*1}}</th>
+        <td nowrap>{{m.arrival_time}}</td>
+        <td nowrap>{{m.name}}</td>
+        <td nowrap>{{m.Depertment}}</td>
+        <td nowrap>{{m.office}}</td>
+        <td nowrap>{{m.regional}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+</div>
+

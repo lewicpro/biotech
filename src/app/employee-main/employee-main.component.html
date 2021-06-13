@@ -1,79 +1,91 @@
-<div style="overflow: hidden;">
-     <!-- Breadcrumb -->
-     <div class="page-title-wrap" style="background-image: url(assets/img/media/page-title-bg.svg);">
-      <div class="container">
-          <div class="row">
-              <div class="col-12">
-                  <div class="page-title text-white">
-                      <span class="stroke-text">Biottendance</span>
-                      <h1>Login</h1>
-                      <ul class="nav">
-                          <li><a href="index-2.html">Home</a></li>
-                          <li class="active">Login</li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <!-- End Breadcrumb -->
+<div style="padding: 10px;"></div>
+<div style="background-color: white; height:200px;  box-shadow: 0px 7px 4px 0px #00000026">
 
-  <!-- Login -->
-  <div class="pt-120 pb-120 d-flex align-items-center">
-      <div class="container">
-          <!-- Card -->
-          <div class="card justify-content-center">
-              <div class="row justify-content-center">
-                  <div class="col-xl-7 col-lg-9">
-                    <div style="color:red; text-align: center;">{{errr.non_field_errors}}</div>
-
-
-                      <!-- <form action="#"> -->
-                          <!-- Form Group -->
-                          <div class="form-group mb-20">
-                              <label for="email" class="mb-2 semi-bold black">Username</label>
-                              <input  #box1 (blur)="user(box1.value)" type="user" id="email" class="form-control" placeholder="Email Address" style="margin: 0;">
-                              <div style="color:red; font-size: 13px;">{{errr.username}}</div>
-                          </div>
-                          <!-- End Form Group -->
-
-                          <!-- Form Group -->
-                          <div class="form-group mb-20">
-                              <label for="password" class="mb-2 semi-bold black">Password</label>
-                              <input #box2 (blur)="pass(box2.value)" type="password" id="password" class="form-control" placeholder="********" style="margin: 0;">
-                              <div style="color:red; font-size: 13px;">{{errr.password}}</div>
-                          </div>
-                          <!-- End Form Group -->
-
-                          <div class="d-flex justify-content-between mb-20">
-                              <div class="d-flex align-items-center">
-                                  <input type="checkbox" id="checkbox">
-                                  <label for="checkbox" class="mb-0 ml-2">Remember Me</label>
-                              </div>
-
-                              <a href="forget-pass.html">Forgot Password?</a>
-                          </div>
-
-                          <div class="mb-30">
-                              <a href="#" class="light-btn mr-3 mb-20">Log In With Facebook</a>
-                              <a href="#" class="light-btn mb-20">Log In With Gmail</a>
-                          </div>
-
-                          <div class="d-flex align-items-center">
-                              <button (click)="login()" class="btn orange">Log In <img src="assets/img/icons/btn-svg.svg" alt="" class="svg"></button>
-                          </div>
-                      <!-- </form> -->
-                  </div>
-              </div>
-          </div>
-          <!-- End Card -->
-      </div>
-  </div>
-  <!-- End Login -->
-
-
+  <ul class="row clearfix list-unstyled m-b-0">
+    <li class="col-lg-3 col-md-6 col-sm-12">
+        <div class="body">
+            <div class="row">
+                <div class="col-7">
+                    <h5 class="m-t-0" style="white-space: nowrap">Total workers</h5>
+                    <!-- <p class="text-small">4% higher than last month</p> -->
+                    <p class="text-small">0% higher than last month</p>
+                </div>
+                <div class="col-5 text-right">
+                    <h2 class="">0</h2>
+                    <!-- <small class="info">of 1Tb</small> -->
+                </div>
+                <div class="col-12">
+                    <div class="progress m-t-20">
+                    <div class="progress-bar l-amber" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="col-lg-3 col-md-6 col-sm-12">
+        <div class="body">
+            <div class="row">
+                <div class="col-7">
+                    <h5 class="m-t-0" nowrap style="white-space: nowrap">Available workers</h5>
+                    <p class="text-small">As expected from the system</p>
+                </div>
+                <div class="col-5 text-right">
+                    <h2 class="">0</h2>
+                    <!-- <small class="info">of 100</small> -->
+                </div>
+                <div class="col-12">
+                    <div class="progress m-t-20">
+                    <div class="progress-bar l-blue" role="progressbar" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100" style="width: 38%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="col-lg-3 col-md-6 col-sm-12">
+        <div class="body">
+            <div class="row">
+                <div class="col-7">
+                    <h5 class="m-t-0" style="white-space: nowrap">Not available workers</h5>
+                    <!-- <p class="text-small">Total Registered email</p> -->
+                </div>
+                <div class="col-5 text-right">
+                    <h2 class="">0</h2>
+                    <!-- <small class="info">of 100</small> -->
+                </div>
+                <div class="col-12">
+                    <div class="progress m-t-20">
+                    <div class="progress-bar l-parpl" role="progressbar" aria-valuenow="39" aria-valuemin="0" aria-valuemax="100" style="width: 39%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="col-lg-3 col-md-6 col-sm-12">
+        <div class="body">
+            <div class="row">
+                <div class="col-7">
+                    <h5 class="m-t-0" style="white-space: nowrap">Suspended workers</h5>
+                    <p class="text-small">Total registered workers</p>
+                </div>
+                <div class="col-5 text-right">
+                    <h2 class="">0</h2>
+                    <small class="info">of 0</small>
+                </div>
+                <div class="col-12">
+                    <div class="progress m-t-20">
+                    <div class="progress-bar l-turquoise" role="progressbar" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100" style="width: 89%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
 </div>
 
+<div style="padding:20px">
+
+</div>
+<div class="row"><div class="col" style="text-align: center;"><button class="btn btn-primary" (click)="registerworker()" >Register worker</button></div><div class="col" style="text-align: center;"><button class="btn btn-primary" (click)="removeuser()">Edit worker</button></div></div>
 <!-- Footer -->
 <footer class="footer">
   <!-- Footer Background Shape -->

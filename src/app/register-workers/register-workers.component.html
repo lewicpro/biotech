@@ -1,0 +1,98 @@
+<div class="row">
+  <div class="col">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Full name</label>
+      <input #box1 (blur)="fullname(box1.value)" type="text" class="form-control" style="background-color: white;">
+      <small id="emailHelp" class="form-text text-muted">Enter full name</small>
+    </div>
+
+  </div>
+  <div class="col">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input #box2 (blur)="Emailname(box2.value)" type="email" class="form-control" style="background-color: white;">
+      <small id="emailHelp" class="form-text text-muted">Enter email adress.</small>
+    </div>
+
+  </div>
+  <div class="col">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Phone Number</label>
+      <input #box3 (blur)="phonenumber(box3.value)" type="text" class="form-control" style="background-color: white;">
+      <small id="emailHelp" class="form-text text-muted">Enter phone number of the user.</small>
+    </div>
+
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Depertment name </label>
+      <input #box4 (blur)="depertmentname(box4.value)" type="text" class="form-control" style="background-color: white;">
+      <small id="emailHelp" class="form-text text-muted">Enter Depertment name</small>
+    </div>
+
+  </div>
+  <div class="col">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Gender</label>
+      <input #box5 (blur)="gender(box5.value)" type="text" class="form-control" style="background-color: white;">
+      <small id="emailHelp" class="form-text text-muted">Enter Gender of the worker.</small>
+    </div>
+
+  </div>
+  <div class="col">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Nationality</label>
+      <input #box6 (blur)="nationality(box6.value)" type="text" class="form-control" style="background-color: white;">
+      <small id="emailHelp" class="form-text text-muted">Enter Nationslity of the worker.</small>
+    </div>
+
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Username </label>
+      <input #box7 (blur)="username(box7.value)" type="text" class="form-control" style="background-color: white;">
+      <small id="emailHelp" class="form-text text-muted">Enter username prefeered in single word</small>
+    </div>
+
+  </div>
+  <div class="col">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Password </label>
+      <input #box9 (blur)="passwords(box1.value)" type="password" class="form-control" style="background-color: white;">
+      <small id="emailHelp" class="form-text text-muted">Enter password preffered by the user.</small>
+    </div>
+
+  </div>
+  <div class="col">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Phiysical adress</label>
+      <input #box10 (blur)="physicaladress(box10.value)" type="text" class="form-control" style="background-color: white;">
+      <small id="emailHelp" class="form-text text-muted">Enter Physical adress.</small>
+    </div>
+
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+
+
+  </div>
+  <div class="col">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Regional </label>
+      <input #box22 (blur)="regional(box22.value)" type="text" class="form-control" style="background-color: white;">
+      <small id="emailHelp" class="form-text text-muted">Enter Regional of the user.</small>
+    </div>
+
+  </div>
+  <div class="col">
+
+
+  </div>
+</div>
+
+<div style="text-align: center;"><button class="btn btn-secondary" (click)="submit()">SUBMIT</button></div>

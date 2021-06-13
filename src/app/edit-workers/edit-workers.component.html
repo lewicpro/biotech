@@ -1,0 +1,52 @@
+
+<div style="background: white; padding:20px"> <h4>Registered list</h4> </div>
+<div style="background:white; padding:10px; box-shadow: 0px 7px 4px 0px #00000026; overflow: scroll;">
+  <table class="table table-borderless table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Full name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Nationality</th>
+        <th scope="col">Department</th>
+        <th scope="col">Username</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Password</th>
+        <th scope="col">Physical address</th>
+        <!-- <th scope="col">Actions</th> -->
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngIf="editval=='True'">
+        <th></th>
+        <th><input type="text" placeholder="eg salawi chacha"></th>
+        <th><input type="text"  placeholder="eg salawi@gmail.com"></th>
+        <th><input type="text" placeholder="eg 0719060504"></th>
+        <th><input type="text" placeholder="eg Tanzanian"></th>
+        <th><input type="text" placeholder="eg department"></th>
+        <th><input type="text" placeholder="eg lewicpro"></th>
+        <th><input type="text" placeholder="eg Male"></th>
+        <th><input type="text" placeholder="eg mabibo"></th>
+        <th style="cursor: pointer;">Edit</th>
+      </tr>
+      <tr *ngFor="let m of all let i = index">
+        <th scope="row">{{i*1 + 1*1}}</th>
+        <td nowrap>{{m.name}}</td>
+        <td nowrap>{{m.Email}}</td>
+        <td nowrap>{{m.Phone}}</td>
+        <td nowrap>{{m.password}}</td>
+        <td nowrap>{{m.Depertment}}</td>
+        <td nowrap>{{m.user}}</td>
+        <td nowrap>{{m.Gender}}</td>
+        <td nowrap>{{m.office}}</td>
+        <td nowrap><span style="color: red; cursor: pointer;" (click)="delete('worker', m.pk)">Delete </span> |<span style="color:blue; cursor: pointer;" (click)="edit()">Edit</span></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+</div>
+

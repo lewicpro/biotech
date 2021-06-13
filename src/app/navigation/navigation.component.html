@@ -7,7 +7,7 @@
                 <div class="col-lg-2 col-sm-3 col-5">
                     <!-- Start Logo -->
                     <div class="logo">
-                        <a href="index-2.html">
+                        <a [routerLink]="['']">
                             <img src="assets/img/icons/SVG/bimimi.svg" width="200" height="200" class="main-logo" alt="">
                             <img src="assets/img/icons/SVG/biot.svg" class="sticky-logo" alt="">
                           </a>
@@ -33,16 +33,18 @@
                                     <li><a href="blog-details.html">Blog Details</a></li>
                                 </ul> -->
                             </li>
-                            <li><a [routerLink]="['/contact']">Contact</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
                         <!-- End Nav -->
                     </div>
 
                     <div class="header-buttons d-flex align-items-center">
-                        <a href="price.html" class="btn d-none d-sm-inline-flex">Get Pro VPN <img src="assets/img/icons/btn-svg.svg" alt="" class="svg"></a>
+                        <a href="#momo" class="btn d-none d-sm-inline-flex">Subscribe<img src="assets/img/icons/btn-svg.svg" alt="" class="svg"></a>
 
                         <a [routerLink]="['/login']" class="btn-link"><img src="assets/img/icons/users.svg" alt="" width="20" height="20" class="svg" style="padding-right: 5px;"> Login</a>
+                        <a style="cursor: pointer;" (click)="screen()" class="btn-link"><span class="material-icons" style="color:lightblue">crop_free</span></a>
                     </div>
+
                 </div>
             </div>
         </div>

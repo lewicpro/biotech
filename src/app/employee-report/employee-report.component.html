@@ -1,0 +1,60 @@
+
+<div style="padding:10px;"></div>
+<div style="background: white; padding:20px; box-shadow: 0px 7px 4px 0px #00000026">
+  <div class="row"  align="center">
+    <div class="col">
+     <a class="btn btn-primary btn-sm" (click)="Daily()" style="text-align: center; cursor: pointer; width:100%; color:rgb(0, 0, 0)">Daily</a>
+    </div>
+    <div class="col">
+      <a class="btn btn-primary btn-sm"  (click)="Monthly()" style=" text-align: center; cursor: pointer; width:100%; color:rgb(0, 0, 0)">Monthly</a>
+    </div>
+    <div class="col" style="text-align: center; ">
+      <a class="btn btn-primary btn-sm" (click)="Yealy()" style="cursor: pointer; width:100%; color:rgb(0, 0, 0)">Yealy</a>
+    </div>
+    <div class="col" style="background-color: rgb(217, 217, 252);;">
+      <!-- <label for="date">From</label> -->
+      <input type="date" #box1 (change)="start(box1.value)" placeholder="From">
+    </div>
+    <div class="col" style="background-color: rgb(217, 217, 252);">
+      <!-- <label for="date">To</label> -->
+      <input #box2 (change)="end(box2.value)"  type="date" placeholder="From">
+    </div>
+    <div class="col">
+      <a class="btn btn-secondary btn-sm" (click)="submitdate()" style="cursor: pointer; width:100%; color:rgb(0, 0, 0)">Submit</a>
+    </div>
+  </div></div>
+<div style="padding:10px;"></div>
+
+<div style="background: white; padding:20px"> <h4>Employee list</h4> </div>
+<div style="background:white; padding:10px; box-shadow: 0px 7px 4px 0px #00000026">
+  <table class="table table-borderless table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Registered</th>
+        <th scope="col">Name</th>
+        <th scope="col">Department</th>
+        <th scope="col">Office</th>
+        <th scope="col">Region</th>
+        <th scope="col">Percentage</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let m of all let i = index">
+        <th scope="row">{{i*1 + 1*1}}</th>
+        <td nowrap>{{m.arrival_time}}</td>
+        <td nowrap>{{m.name}}</td>
+        <td nowrap>{{m.Depertment}}</td>
+        <td nowrap>{{m.office}}</td>
+        <td nowrap>{{m.regional}}</td>
+        <td nowrap></td>
+        <td nowrap><span style="color: rgb(255, 149, 0); cursor: pointer;" (click)="suspend('report', m.pk)">Suspend </span> |<span style="color:blue; cursor: pointer;">Edit</span></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+</div>
+
